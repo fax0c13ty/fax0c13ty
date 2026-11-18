@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 188" width="900" height="188" role="img" aria-labelledby="title">
+  <title id="title">Current engineering focus</title>
+  <style>
+    .log { animation: appear .5s ease-out both; }
+    @keyframes appear { from { opacity: 0; } to { opacity: 1; } }
+    @media (prefers-reduced-motion: reduce) { .log { animation: none; } }
+  </style>
+  <rect x="1" y="1" width="898" height="186" rx="12" fill="#0d1117" stroke="#30363d"/>
+  <path d="M1 49h898" stroke="#30363d"/>
+  <g font-family="JetBrains Mono, Fira Code, Consolas, monospace" font-size="21" fill="#c9d1d9">
+    <text x="32" y="32" fill="#39c5cf">[BUILD OK]</text>
+    <text class="log" style="animation-delay:.2s" x="32" y="85"><tspan fill="#58a6ff">[arch]</tspan><tspan x="148">Designing fault-tolerant microservices</tspan></text>
+    <text class="log" style="animation-delay:.4s" x="32" y="121"><tspan fill="#58a6ff">[net]</tspan><tspan x="148">Processing network packets asynchronously</tspan></text>
+    <text class="log" style="animation-delay:.6s" x="32" y="157"><tspan fill="#58a6ff">[perf]</tspan><tspan x="148">Profiling and optimizing tail latency</tspan></text>
+  </g>
+</svg>
