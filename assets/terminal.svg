@@ -2,26 +2,38 @@
   <title id="title">Linux terminal for fax0c13ty</title>
   <style>
     .line { animation: output .4s ease-out both; }
+    .status { animation: breathe 2.8s ease-in-out infinite; }
+    .stream { stroke-dasharray: 12 88; animation: stream 2.5s linear infinite; }
     .cursor { animation: blink 1.1s 2.2s step-end infinite; }
     @keyframes output { from { opacity: 0; transform: translateY(5px); } to { opacity: 1; transform: translateY(0); } }
+    @keyframes breathe { 50% { opacity: .3; } }
+    @keyframes stream { to { stroke-dashoffset: -100; } }
     @keyframes blink { 50% { opacity: 0; } }
-    @media (prefers-reduced-motion: reduce) { .line, .cursor { animation: none; } }
+    @media (prefers-reduced-motion: reduce) { .line, .cursor, .status, .stream { animation: none; } }
   </style>
-  <rect x="1" y="1" width="898" height="258" rx="15" fill="#0d1117" stroke="#30363d"/>
-  <path d="M1 43h898" stroke="#30363d"/>
-  <circle cx="24" cy="22" r="4" fill="#58a6ff"/>
-  <circle cx="39" cy="22" r="4" fill="#39c5cf"/>
-  <circle cx="54" cy="22" r="4" fill="#484f58"/>
-  <g font-family="JetBrains Mono, Fira Code, Consolas, monospace" font-size="19" fill="#c9d1d9">
-    <text x="450" y="28" text-anchor="middle" font-size="15" fill="#8b949e">fax0c13ty@linux:~</text>
-    <text x="42" y="79"><tspan fill="#39c5cf">$</tspan> neofetch --stdout</text>
-    <text class="line" style="animation-delay:.5s" x="42" y="115"><tspan fill="#58a6ff">LANGUAGE</tspan><tspan x="245">C++20 / C++23</tspan></text>
-    <text class="line" style="animation-delay:.8s" x="42" y="144"><tspan fill="#58a6ff">NETWORK I/O</tspan><tspan x="245">Linux sockets · epoll · async I/O</tspan></text>
-    <text class="line" style="animation-delay:1.1s" x="42" y="173"><tspan fill="#58a6ff">CONCURRENCY</tspan><tspan x="245">Multithreading · thread pools</tspan></text>
-    <text class="line" style="animation-delay:1.4s" x="42" y="202"><tspan fill="#58a6ff">SYSTEMS</tspan><tspan x="245">High-load, low-latency services</tspan></text>
+  <rect x="1" y="1" width="898" height="258" rx="15" fill="#080809" stroke="#442027"/>
+  <path d="M1 43h898" stroke="#442027"/>
+  <circle class="status" cx="866" cy="22" r="5" fill="#ff304a"/>
+  <path d="M690 96h161m-161 36h161m-161 36h161m-161 36h161" fill="none" stroke="#442027"/>
+  <g fill="none" stroke="#ff5364" stroke-width="2">
+    <path class="stream" d="M690 96h161" pathLength="100"/>
+    <path class="stream" d="M690 132h161" pathLength="100" style="animation-delay:-.9s"/>
+    <path class="stream" d="M690 168h161" pathLength="100" style="animation-delay:-1.7s"/>
+    <path class="stream" d="M690 204h161" pathLength="100" style="animation-delay:-.4s"/>
+  </g>
+  <circle cx="24" cy="22" r="4" fill="#ff5364"/>
+  <circle cx="39" cy="22" r="4" fill="#ff304a"/>
+  <circle cx="54" cy="22" r="4" fill="#742b38"/>
+  <g font-family="JetBrains Mono, Fira Code, Consolas, monospace" font-size="19" fill="#e6dadd">
+    <text x="450" y="28" text-anchor="middle" font-size="15" fill="#b7949c">fax0c13ty@linux:~</text>
+    <text x="42" y="79"><tspan fill="#ff304a">$</tspan> neofetch --stdout</text>
+    <text class="line" style="animation-delay:.5s" x="42" y="115"><tspan fill="#ff5364">LANGUAGE</tspan><tspan x="245">C++20 / C++23</tspan></text>
+    <text class="line" style="animation-delay:.8s" x="42" y="144"><tspan fill="#ff5364">NETWORK I/O</tspan><tspan x="245">Linux sockets · epoll · async I/O</tspan></text>
+    <text class="line" style="animation-delay:1.1s" x="42" y="173"><tspan fill="#ff5364">CONCURRENCY</tspan><tspan x="245">Multithreading · thread pools</tspan></text>
+    <text class="line" style="animation-delay:1.4s" x="42" y="202"><tspan fill="#ff5364">SYSTEMS</tspan><tspan x="245">High-load, low-latency services</tspan></text>
     <g class="line" style="animation-delay:1.8s">
-      <text x="42" y="234" fill="#39c5cf">$</text>
-      <rect class="cursor" x="65" y="218" width="10" height="19" rx="1" fill="#39c5cf"/>
+      <text x="42" y="234" fill="#ff304a">$</text>
+      <rect class="cursor" x="65" y="218" width="10" height="19" rx="1" fill="#ff304a"/>
     </g>
   </g>
 </svg>

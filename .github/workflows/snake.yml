@@ -28,13 +28,13 @@ jobs:
         with:
           github_user_name: ${{ github.repository_owner }}
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          outputs: 'dist/snake.svg?palette=github-dark&color_snake=#39c5cf'
+          outputs: 'dist/snake.svg?palette=github-dark&color_snake=#ff5364&color_dots=#241016,#57202c,#962538,#c93147,#ff5364'
 
       - name: Generate public GitHub stats
         uses: stats-organization/github-readme-stats-action@v2
         with:
           card: stats
-          options: username=${{ github.repository_owner }}&theme=github_dark&hide_border=true&show_icons=true&hide_rank=true
+          options: username=${{ github.repository_owner }}&theme=github_dark&bg_color=080809&title_color=ff5364&text_color=e6dadd&icon_color=ff304a&hide_border=true&show_icons=true&hide_rank=true
           path: dist/stats.svg
           token: ${{ secrets.GITHUB_TOKEN }}
           fail_on_error: true
@@ -43,7 +43,7 @@ jobs:
         uses: stats-organization/github-readme-stats-action@v2
         with:
           card: top-langs
-          options: username=${{ github.repository_owner }}&theme=github_dark&hide_border=true&layout=compact
+          options: username=${{ github.repository_owner }}&theme=github_dark&bg_color=080809&title_color=ff5364&text_color=e6dadd&hide_border=true&layout=compact
           path: dist/languages.svg
           token: ${{ secrets.GITHUB_TOKEN }}
           fail_on_error: true

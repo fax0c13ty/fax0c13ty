@@ -1,35 +1,55 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 274" width="900" height="274" role="img" aria-labelledby="title">
   <title id="title">fax0c13ty — C++ Backend Engineer // High-Load &amp; Low-Latency Systems</title>
   <style>
-    .typed { animation: typing 5s steps(56, end) .35s both; }
+    .typed { animation: typing 12s steps(55, end) infinite; }
+    .beam { animation: scan 5s linear infinite; }
+    .signal { animation: signal 3.6s ease-in-out infinite; }
+    .trace { stroke-dasharray: 14 86; animation: trace 4s linear infinite; }
     .cursor { animation: blink 1.1s step-end infinite; }
     .packet { animation: transmit 3.2s linear infinite; }
-    @keyframes typing { from { width: 0; } to { width: 740px; } }
+    @keyframes typing { 0%, 3% { width: 0; } 36%, 96% { width: 740px; } 100% { width: 0; } }
+    @keyframes scan { from { transform: translateY(-80px); } to { transform: translateY(200px); } }
+    @keyframes signal { 50% { opacity: .32; } }
+    @keyframes trace { to { stroke-dashoffset: -100; } }
     @keyframes blink { 50% { opacity: 0; } }
     @keyframes transmit { from { transform: translateX(-16px); opacity: 0; } 25%, 75% { opacity: 1; } to { transform: translateX(114px); opacity: 0; } }
-    @media (prefers-reduced-motion: reduce) { .typed, .cursor, .packet { animation: none; } }
+    @media (prefers-reduced-motion: reduce) { .typed, .cursor, .packet, .beam, .signal, .trace { animation: none; } }
   </style>
   <defs>
+    <clipPath id="panel"><rect x="2" y="49" width="896" height="179"/></clipPath>
+    <pattern id="grid" width="24" height="24" patternUnits="userSpaceOnUse">
+      <path d="M0 24V0H24" fill="none" stroke="#ff304a" opacity=".12"/>
+    </pattern>
+    <linearGradient id="beam" x2="0" y2="1">
+      <stop stop-color="#ff304a" stop-opacity="0"/>
+      <stop offset="1" stop-color="#ff304a" stop-opacity=".14"/>
+    </linearGradient>
     <linearGradient id="accent">
-      <stop stop-color="#58a6ff"/>
-      <stop offset="1" stop-color="#39c5cf"/>
+      <stop stop-color="#ff5364"/>
+      <stop offset="1" stop-color="#ff304a"/>
     </linearGradient>
     <clipPath id="typing">
       <rect class="typed" x="49" y="160" width="740" height="48"/>
     </clipPath>
   </defs>
-  <rect x="1" y="1" width="898" height="272" rx="15" fill="#0d1117" stroke="#30363d"/>
-  <path d="M1 48h898" stroke="#30363d"/>
-  <path d="M49 231h802" stroke="#21262d"/>
+  <rect x="1" y="1" width="898" height="272" rx="15" fill="#080809" stroke="#442027"/>
+  <g clip-path="url(#panel)">
+    <rect x="514" y="49" width="386" height="179" fill="url(#grid)"/>
+    <rect class="beam" x="514" y="20" width="386" height="42" fill="url(#beam)"/>
+    <path class="signal" d="M608 117h48l12-19 20 40 22-57 21 38h119" fill="none" stroke="#ff304a" stroke-width="2" opacity=".65"/>
+    <path class="trace" d="M608 117h48l12-19 20 40 22-57 21 38h119" pathLength="100" fill="none" stroke="#ff9aa5" stroke-width="2"/>
+  </g>
+  <path d="M1 48h898" stroke="#442027"/>
+  <path d="M49 231h802" stroke="#32151c"/>
   <path d="M49 231h140" stroke="url(#accent)" stroke-width="2"/>
-  <circle class="packet" cx="65" cy="231" r="4" fill="#39c5cf"/>
+  <circle class="packet" cx="65" cy="231" r="4" fill="#ff304a"/>
   <g font-family="JetBrains Mono, Fira Code, Consolas, monospace">
-    <text x="49" y="30" font-size="15" fill="#8b949e">~/profile</text>
-    <text x="851" y="30" text-anchor="end" font-size="15" fill="#39c5cf">github.com</text>
-    <text x="49" y="138" font-size="66" font-weight="700" fill="#e6edf3">fax0c13ty</text>
+    <text x="49" y="30" font-size="15" fill="#b7949c">~/profile</text>
+    <text x="851" y="30" text-anchor="end" font-size="15" fill="#ff304a">github.com</text>
+    <text x="49" y="138" font-size="66" font-weight="700" fill="#fff0f2">fax0c13ty</text>
     <g clip-path="url(#typing)">
       <text x="49" y="190" font-size="21" textLength="710" lengthAdjust="spacingAndGlyphs" fill="url(#accent)">C++ Backend Engineer // High-Load &amp; Low-Latency Systems</text>
-      <rect class="cursor" x="768" y="171" width="10" height="23" rx="1" fill="#39c5cf"/>
+      <rect class="cursor" x="768" y="171" width="10" height="23" rx="1" fill="#ff304a"/>
     </g>
   </g>
 </svg>

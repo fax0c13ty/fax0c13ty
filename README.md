@@ -1,9 +1,9 @@
 <div align="center">
+  <img src="assets/mask.svg" width="900" alt="Анимированная маска Anonymous в чёрно-красном стиле">
+  <br>
   <a href="https://github.com/fax0c13ty">
     <img src="assets/header.svg" width="900" alt="fax0c13ty — C++ Backend Engineer // High-Load &amp; Low-Latency Systems">
   </a>
-  <br>
-  <img src="https://komarev.com/ghpvc/?username=fax0c13ty&amp;style=flat-square&amp;color=246998&amp;label=PROFILE+VIEWS" alt="Profile views for fax0c13ty">
 </div>
 
 ![Terminal output: C++20/23, Linux networking, multithreading and high-load services](assets/terminal.svg)
@@ -14,14 +14,7 @@
 
 ### `> core_principles`
 
-```text
-[+] memory safety ........... RAII · smart pointers · zero leaks
-[+] concurrency ............. lock-free · thread pools · async I/O
-[+] performance ............. zero-copy · cache locality · profiling
-[+] build & deploy .......... CMake · Docker · Linux systemd
-[-] raw new/delete .......... never in modern C++
-[-] undefined behavior ...... strictly zero tolerance
-```
+![Memory safety — RAII, smart pointers, zero leaks. Concurrency — lock-free, thread pools, async I/O. Performance — zero-copy, cache locality, profiling. Build and deploy — CMake, Docker, Linux systemd. Avoid raw new/delete and undefined behavior.](assets/principles.svg)
 
 ### `> focus`
 

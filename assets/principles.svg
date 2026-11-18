@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 294" width="900" height="294" role="img" aria-labelledby="title">
+  <title id="title">Core engineering principles</title>
+  <style>
+    .row { animation: reveal .55s ease-out both; }
+    .cursor { animation: blink 1.2s step-end infinite; }
+    .pulse { stroke-dasharray: 13 87; animation: flow 4s linear infinite; }
+    @keyframes reveal { from { opacity: 0; transform: translateX(-8px); } }
+    @keyframes blink { 50% { opacity: 0; } }
+    @keyframes flow { to { stroke-dashoffset: -100; } }
+    @media (prefers-reduced-motion: reduce) { .row, .cursor, .pulse { animation: none; } }
+  </style>
+  <rect x="1" y="1" width="898" height="292" rx="14" fill="#080809" stroke="#442027"/>
+  <path d="M1 49h898M28 267h844" stroke="#442027"/>
+  <path class="pulse" d="M28 267h844" pathLength="100" stroke="#ff5364" stroke-width="2"/>
+  <g font-family="JetBrains Mono, Fira Code, Consolas, monospace" font-size="19" fill="#e6dadd" xml:space="preserve">
+    <text x="28" y="32" fill="#ff5364">$ cat core_principles</text>
+    <rect class="cursor" x="276" y="16" width="9" height="19" rx="1" fill="#ff304a"/>
+    <text class="row" x="28" y="89"><tspan fill="#ff5364">[+]</tspan> memory safety <tspan fill="#86515c">...........</tspan> RAII · smart pointers · zero leaks</text>
+    <text class="row" style="animation-delay:.12s" x="28" y="119"><tspan fill="#ff5364">[+]</tspan> concurrency <tspan fill="#86515c">.............</tspan> lock-free · thread pools · async I/O</text>
+    <text class="row" style="animation-delay:.24s" x="28" y="149"><tspan fill="#ff5364">[+]</tspan> performance <tspan fill="#86515c">.............</tspan> zero-copy · cache locality · profiling</text>
+    <text class="row" style="animation-delay:.36s" x="28" y="179"><tspan fill="#ff5364">[+]</tspan> build &amp; deploy <tspan fill="#86515c">..........</tspan> CMake · Docker · Linux systemd</text>
+    <text class="row" style="animation-delay:.48s" x="28" y="209"><tspan fill="#ff304a">[-]</tspan> raw new/delete <tspan fill="#86515c">..........</tspan> never in modern C++</text>
+    <text class="row" style="animation-delay:.6s" x="28" y="239"><tspan fill="#ff304a">[-]</tspan> undefined behavior <tspan fill="#86515c">......</tspan> strictly zero tolerance</text>
+  </g>
+</svg>
